@@ -3,3 +3,43 @@
 index.css (common.css)
 about.css (common.css)
 service.cee (common.css) */ 
+main{ position: relative; height: 100vh; overflow: hidden;}
+/* 
+viewport height = vh (세로)
+viewport width = vw (가로)
+꽉차게 함.
+*/
+
+.info{
+    background-color: rgba(80, 128, 38, 0.5); /* 마지막 알파값이 반투명 */
+    /* opacity: 0.5; = 이건 반투명, 글자도 반투명됨 */
+    position: absolute;
+    left: 0; top: 0;
+    height: 100%; /* 부모크기를 가져와야해서, 메인에 포지션 릴레이티브 적용 */
+    
+    display: flex; /* 가로설정 */
+    flex-direction: column; /* 방향설정 */
+    justify-content: center;
+    padding: 0 3%;
+}
+.info > h2{}
+.info > ul{}
+.info > ul > li{}
+.info > ul > li > b{margin-top: 2rem;} /* 2rem 은 기본크기 x2 */ 
+.info > ul > li > b::before{           /* 공간선택자.. 태그 앞에 공간이 생김 */
+    content: '●'; /* content > 공간선택자에서의 필수속성!! 빠질수없다. 키보드 ㅁ+한자 특수기호 넣었음, */
+    font-size: .5rem; /* 0.5 이랑 같음 */
+    /* vertical-align: middle;
+    line-height: .1rem; 중앙으로 옮겨볼려고 방식1*/
+    /* transform: translateY(-100%); 중앙으로 옮겨볼려고 방식2*/
+    position: relative; top: -3px;
+    padding-right: 10px;
+
+}
+
+.info > ul > li > p{white-space: pre-line;} /* 문자 정리~ 1줄에서 3줄로 */
+
+.slide{height: 100%;} 
+/* 메인(부모) vh 를 그대로 받아서 창을 줄여도 꽉차게, 자식들한테는 % 값을 넣어주는게 좋음 
+ 가로 사이즈는 가져가는데, 세로 값은 안가져가서 지정해줘야함 */
+.slide > img{width: 100%; height: 100%; object-fit: cover;} /* 화면꽉차게 */

@@ -15,7 +15,7 @@ span,i,b,mark,strong{display: inline-block;} /* 인라인요소니까.. ex) 인�
 
 *{  /* 공통 */
     box-sizing: border-box;
-    color: #333;
+    color: #fff;
     font-size: 1rem; /* rem은 곱하기 단위 2rem 은 32px, 기본픽셀은 위의 html, body 에서 정했음, 최상위 태그가 가지고 있는 폰트사이즈 곱하기, em은 부모가 가지고 있는 사이즈의 곱하기 */
 
 }
